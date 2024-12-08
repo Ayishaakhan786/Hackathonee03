@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import footer1 from "./img/footer1.png";
 import footer2 from './img/footer2.png';
