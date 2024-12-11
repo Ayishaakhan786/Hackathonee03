@@ -1,5 +1,9 @@
 import Image from "next/image";
+
 import plate from "./Image.png";
+import egg1 from './egg.png';
+import egg2 from './egg2.png';
+import egg3 from './egg3.png';
 
 export default function Hero(){
   return(
@@ -22,39 +26,53 @@ export default function Hero(){
   className="w-50 h-auto shadow-md "/>
 </div>
       </div>
-    <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8"></div>
-  <section className="mb-5 lg:w-1/2">
-    <h2 className="text-orange-500 italic">about us</h2>
-    <h1 className="text-4xl font bold text-orange-500 mb-4">
-      We <span className="text-white">Create the best 
-      <br/>Foody Product<br />
+      {/* Second section */}
+      <div className="bg-black px-6 py-12 overflow-hidden">
+  <div className="max-w-7xl max-md:max-w-md mx-auto">
+    <div className="grid md:grid-cols-2 items-center gap-12">
+      <div>
+        <h3 className="text-orange-500 italic text-xl font-thin">about us</h3>
+        <h1 className="text-4xl font-bold text-orange-500 mb-4">
+       We <span className="text-white">Create the best 
+      <br/>Foody Product<br/>
       </span></h1>
-      <p className="text-gray-400 mt-4">Lorem ipsum dolor sit amet, consectetur
+        <p className="text-base leading-relaxed text-gray-400 mt-4">
+        Lorem ipsum dolor sit amet, consectetur
        adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla
        bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum.
-       Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
-       <ul className="mt-4 space-y-2 list-disc list-inside text-gray-300 mb-6">
+       Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
+        </p>
+        <ul className="mt-4 space-y-2 list-disc list-inside text-gray-300 mb-6">
         <li> Lacus nisi, et ac dapibus sit eu velit in consequat.</li>
         <li> Quisque diam pellentesque bibendum non dui volutpat fringilla</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+        <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
        </ul>
-       <div className="flex items-center gap-4">
-       <button className="px-6 py-2 bg-orange-500 rounded-md hover:bg-orange-600">Read More</button>
-       </div>
-       <div className="lg:w-1/2 flex flex-col gap-4 items center">
-       <div className="mb-4">
-        <img src="/images/food1.jpg" alt="deleiciso" className="w-full h-auto rounded"/>
+       {/* button */}
+        <div className="mt-10">
+          <button
+            type="button"
+            className="bg-orange-500 hover:bg-orange-600 transition-all text-white text-sm rounded-full px-5 py-3"
+          >
+            Read More
+          </button>
         </div>
-        <div className="flex justify-between w-full">
-         <img src="/images/food2.jpg" alt="taste" className="w-full h-auto rounded"/>
-         <img src="/images/food1.jpg" alt="deleiciso" className="w-full h-auto rounded"/>
-        </div>
+      </div>
+      {/* Image section */}
+      <div className="lg:w-1/2 flex flex-col gap-3 items center ml-10">
+      <div className="mb-1">
+        <Image
+          src= {egg1} alt="taste"
+          className="shrink-0 width: 660px height: 330px rounded-md object-contain radius-6px top-1070px left-960px"
+        />
+      </div>
+      <div className="flex justify-between w-full gap-x-2">
+       <Image src= {egg2} alt="taste" className="rounded width: 322px height: 194px top-1416px left-960px radius-6px"/>
+       <Image src={egg3} alt="deleiciso" className="rounded width: 660px height: 330px radius-6px width: 322px height: 194px top-1416px left-1298px"/>
        </div>
-  </section>
-  <section className="mt-16">
-    <h2 className="text-3xl font-semibold text-orange-500 mb-6">Choose Food Items</h2>
-    <div></div>
-  </section>
+       </div>
+    </div>
+  </div>
+</div>
       </main>
   );
 }
