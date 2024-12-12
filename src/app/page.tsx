@@ -4,6 +4,10 @@ import plate from "./Image.png";
 import egg1 from './egg.png';
 import egg2 from './egg2.png';
 import egg3 from './egg3.png';
+import third1 from './third-sec1.png';
+import third2 from './third-sec2.png';
+import third3 from './third-sec3.png';
+import third4 from './third-sec4.png';
 
 export default function Hero(){
   return(
@@ -67,12 +71,39 @@ export default function Hero(){
       </div>
       <div className="flex justify-between w-full gap-x-2">
        <Image src= {egg2} alt="taste" className="rounded width: 322px height: 194px top-1416px left-960px radius-6px"/>
-       <Image src={egg3} alt="deleiciso" className="rounded width: 660px height: 330px radius-6px width: 322px height: 194px top-1416px left-1298px"/>
+       <Image src={egg3} alt="deleiciso" className="rounded radius-6px width: 322px height: 194px top-1416px left-1298px"/>
        </div>
        </div>
     </div>
   </div>
 </div>
+{/* Third Section */}
+<section className="text-white body-font italic mt-0">
+  <div className="container px-5 py-22 mx-auto">
+    <div className="flex flex-col text-center w-full mb-20">
+      <h2 className="text-xl font-medium title-font mb-4 text-orange-500">
+        Food Category
+      </h2>
+      <h1 className="text-orange-500 font-bold text-4xl">
+        Ch<span className="text-white">oose Food Items</span>
+      </h1>
+    </div>
+    <div className="flex flex-wrap m-4 text-center">
+      <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+      <Image src={third1} alt="third1" className="rounded radius-6px width:1320px height:489px top-1752px left-300px"/>
+      </div>
+      <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+        <Image src={third2} alt="third2" className="rounded radius-6px width:1320px height:489px top-1752px left-300px"/>
+      </div>
+      <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+      <Image src={third3} alt="third3" className="rounded radius-6px width:1320px height:489px top-1752px left-300px"/>
+      </div>
+      <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+      <Image src={third4} alt="third4" className="rounded radius-6px width:1320px height:489px top-1752px left-300px"/>
+      </div>
+    </div>
+  </div>
+</section>
       </main>
   );
 }
