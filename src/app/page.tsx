@@ -8,6 +8,15 @@ import third1 from './third-sec1.png';
 import third2 from './third-sec2.png';
 import third3 from './third-sec3.png';
 import third4 from './third-sec4.png';
+import fourth1 from './f1.png';
+import fourth2 from './f2.png';
+import fourth3 from './f3.png';
+import fourth4 from './f4.png';
+import fourth5 from './f5.png';
+import fourth6 from './f6.png';
+
+import { PiCookieThin, PiHamburger } from "react-icons/pi";
+import { TbGlassFull } from "react-icons/tb";
 
 export default function Hero(){
   return(
@@ -104,6 +113,54 @@ export default function Hero(){
     </div>
   </div>
 </section>
+{/* Fourth Section */}
+<section className="text-gray-600 body-font overflow-hidden">
+  <div className="container px-5 py-5 mx-auto">
+    <div className="lg:w-4/5 flex">
+      <Image src={fourth1} alt="fourth01" className="rounded radius-6px width:362px height:356px top-2361px left-300px"/>
+      <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+        <h2 className="text-orange-500 italic">
+          Why Choose us
+        </h2>
+        <h1 className="text-orange-500 text-4xl font-medium mb-1 font-bold">
+          Ex<span className="text-white">tra ordinary taste And Experienced</span>
+        </h1>
+        <div className="flex mb-3">
+        <p className="leading-relaxed text-white py-4 pl-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum.
+        Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis
+        sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
+        </p>
+        </div>
+        <div className="flex gap-4 mb-4">
+        <div className="bg-orange-500 p-4 rounded-lg text-center">
+          <div className="text-white text-6xl px-1">
+          <PiHamburger/>
+          </div>
+          <p className="text-white">Fast Food</p>
+        </div>
+        <div className="bg-orange-500 p-4 rounded-lg text-center">
+        <div className="text-white text-6xl px-1">
+        <PiCookieThin/>
+          </div>
+          <p className="text-white">Lunch</p>
+        </div>
+        <div className="bg-orange-500 p-4 rounded-lg text-center">
+        <div className="text-white text-6xl px-1">
+        <TbGlassFull/>
+          </div>
+          <p className="text-white">Dinner</p>
+        </div>
+        </div>
+        <div className="bg-white m-8 px-2 text-center rounded-lg">
+          <h1 className="text-orange-500 text-4xl">30+  <span className="text-gray-900 text-xl">Years of</span>{" "}<br/><p className="text-black text-xl">Experienced</p></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       </main>
   );
 }
