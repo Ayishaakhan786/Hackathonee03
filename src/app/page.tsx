@@ -9,11 +9,10 @@ import third2 from './third-sec2.png';
 import third3 from './third-sec3.png';
 import third4 from './third-sec4.png';
 import fourth1 from './f1.png';
-import fourth2 from './f2.png';
-import fourth3 from './f3.png';
-import fourth4 from './f4.png';
-import fourth5 from './f5.png';
-import fourth6 from './f6.png';
+import chef1 from './Chef1.png';
+import chef2 from './chef2.png';
+import chef3 from './Chef3.png';
+import chef4 from './chef4.png';
 
 import { PiCookieThin, PiHamburger } from "react-icons/pi";
 import { TbGlassFull } from "react-icons/tb";
@@ -89,7 +88,7 @@ export default function Hero(){
 {/* Third Section */}
 <section className="text-white body-font italic mt-0">
   <div className="container px-5 py-22 mx-auto">
-    <div className="flex flex-col text-center w-full mb-20">
+    <div className="flex flex-col text-center w-full mb-10">
       <h2 className="text-xl font-medium title-font mb-4 text-orange-500">
         Food Category
       </h2>
@@ -135,7 +134,7 @@ export default function Hero(){
         </div>
         <div className="flex gap-4 mb-4">
         <div className="bg-orange-500 p-4 rounded-lg text-center">
-          <div className="text-white text-6xl px-1">
+          <div className="text-white text-5xl px-1">
           <PiHamburger/>
           </div>
           <p className="text-white">Fast Food</p>
@@ -160,6 +159,41 @@ export default function Hero(){
     </div>
   </div>
 </section>
+{/* Fifth section */}
+<section className="text-white body-font italic mt-0">
+  <div className="container px-5 py-22 mx-auto">
+    <div className="flex flex-col text-center w-full mb-10">
+      <h2 className="text-lg font-medium title-font mb-4 text-orange-500">
+        Chefs
+      </h2>
+      <h1 className="text-orange-500 font-bold text-4xl">
+        Me<span className="text-white">et Our Chefs</span>
+      </h1>
+    </div>
+    <div className="flex flex-wrap m-2 text-center">
+      <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+      <Image src={chef1} alt="third1" className="rounded radius-6px width:1320px height:489px top-1752px left-300px"/>
+      </div>
+      <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+        <Image src={chef2} alt="third2" className="rounded radius-6px width:1320px height:489px top-1752px left-300px"/>
+      </div>
+      <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+      <Image src={chef3} alt="third3" className="rounded radius-6px width:1320px height:489px top-1752px left-300px"/>
+      </div>
+      <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+      <Image src={chef4} alt="third4" className="rounded radius-6px width:1320px height:489px top-1752px left-300px"/>
+      </div>
+    </div>
+    <div className="flex items-center justify-center h-full">
+      <button className="self-end bg-black border-2 border-orange-500 text-white px-4 py-2 rounded-full hover:bg-gray-800">
+        See More
+      </button>
+    </div>
+  </div>
+</section>
+{/* sixth section */}
+
+
 
       </main>
   );

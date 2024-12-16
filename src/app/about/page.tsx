@@ -5,9 +5,9 @@ import lemon from './img/lemon.png';
 import yogurt from './img/yougurt.png';
 import pasta from './img/pasta.png';
 import third from "./img/thirdSection.png";
-import student from './img/Student.png';
-import coffee from './img/Coffee.png';
-import person from './img/Person.png';
+import { PiCoffeeLight, PiCookieThin, PiHamburger, PiPersonLight, PiStudent } from "react-icons/pi";
+import { TbGlassFull } from "react-icons/tb";
+
 export default function About() {
   return (
     <div>
@@ -95,14 +95,14 @@ export default function About() {
         </div>
       </section>
       {/* Fourth section */}
-      <section className="text-white body-font">
+      {/* <section className="text-white body-font">
   <div className="container px-3 py-20 mx-auto">
     <div className="flex flex-wrap -m-4">
       <div className="p-4 md:w-1/3">
         <div className="h-full border-2 rounded-lg overflow-hidden">
           <Image
             className="lg:h-48 md:h-36 w-full object-cover object-center"
-            src={student}
+            src={}
             alt="blog"
           />
           <div className="p-6">
@@ -118,7 +118,7 @@ export default function About() {
         <div className="h-full border-2  rounded-lg overflow-hidden">
           <Image
             className="lg:h-48 md:h-36 w-full object-cover object-center"
-            src={coffee}
+            src={}
             alt="blog"
           />
           <div className="p-6">
@@ -148,7 +148,30 @@ export default function About() {
       </div>
     </div>
   </div>
-</section>
+</section> */}
+<div className="flex gap-4 mb-3 items-center justify-center">
+        <div className="bg-black p-2 rounded-lg text-center">
+          <div className="text-white text-7xl px-1 flex justify-center items-center">
+          <PiStudent/>
+          </div>
+          <h1 className="text-white text-bold text-2xl">Best Chef</h1>
+          <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Quisque diam pellentesque bibendum non dui volutpat</p>
+        </div>
+        <div className="bg-black p-2 rounded-lg text-center">
+        <div className="text-white text-7xl px-1 flex justify-center items-center">
+        <PiCoffeeLight/>
+          </div>
+          <h1 className="text-white text-bold text-2xl">120 Food Items</h1>
+          <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Quisque diam pellentesque bibendum non dui volutpat</p>
+        </div>
+        <div className="bg-black p-2 rounded-lg text-center">
+        <div className="text-white text-7xl px-1 flex justify-center items-center">
+        <PiPersonLight/>
+          </div>
+          <h1 className="text-white text-bold text-2xl">Clean Environment</h1>
+          <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Quisque diam pellentesque bibendum non dui volutpat </p>
+        </div>
+        </div>
 </div>
   );
 }
