@@ -5,8 +5,7 @@ import lemon from './img/lemon.png';
 import yogurt from './img/yougurt.png';
 import pasta from './img/pasta.png';
 import third from "./img/thirdSection.png";
-import { PiCoffeeLight, PiCookieThin, PiHamburger, PiPersonLight, PiStudent } from "react-icons/pi";
-import { TbGlassFull } from "react-icons/tb";
+import { PiCoffeeLight, PiPersonLight, PiStudent } from "react-icons/pi";
 
 export default function About() {
   return (
@@ -88,67 +87,13 @@ export default function About() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam <br />
               pellentesque bibendum non dui volutpat fringilla bibendum.
           <Image
-            className="mb-10 object-cover object-center w-1320px h-386px mt-1552px ml-300px mt-10"
+            className="mb-2 object-cover object-center w-1320px h-386px mt-1552px ml-300px mt-10"
             alt="hero"
             src = {third}
           />
         </div>
       </section>
       {/* Fourth section */}
-      {/* <section className="text-white body-font">
-  <div className="container px-3 py-20 mx-auto">
-    <div className="flex flex-wrap -m-4">
-      <div className="p-4 md:w-1/3">
-        <div className="h-full border-2 rounded-lg overflow-hidden">
-          <Image
-            className="lg:h-48 md:h-36 w-full object-cover object-center"
-            src={}
-            alt="blog"
-          />
-          <div className="p-6">
-            <h1 className="title-font text-lg font-medium text-white mb-2 text-bold text-center">
-            BEST CHEF
-            </h1>
-            <p className="leading-relaxed mb-3 text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat</p>
-            </div>
-        </div>
-      </div>
-      <div className="p-4 md:w-1/3">
-        <div className="h-full border-2  rounded-lg overflow-hidden">
-          <Image
-            className="lg:h-48 md:h-36 w-full object-cover object-center"
-            src={}
-            alt="blog"
-          />
-          <div className="p-6">
-            <h1 className="title-font text-lg font-medium text-white mb-2 text-bold text-center">
-            120 Item food
-            </h1>
-            <p className="leading-relaxed mb-3 text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat</p>
-          </div>
-        </div>
-      </div>
-      <div className="p-4 md:w-1/3">
-        <div className="h-full border-2 rounded-lg overflow-hidden">
-          <Image
-            className="lg:h-48 md:h-36 w-full object-cover object-center"
-            src={person}
-            alt="blog"
-          />
-          <div className="p-6">
-            <h1 className="title-font text-lg font-medium text-white mb-2 text-bold text-center">
-            Clean Environment
-            </h1>
-            <p className="leading-relaxed mb-3 text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> */}
 <div className="flex gap-4 mb-3 items-center justify-center">
         <div className="bg-black p-2 rounded-lg text-center">
           <div className="text-white text-7xl px-1 flex justify-center items-center">
