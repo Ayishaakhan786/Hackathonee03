@@ -215,7 +215,7 @@ export default function Hero(){
   </div>
 </section>
 {/* sixth section */}
-<div className="w-full text-left">
+<div className="w-full text-left mt-20">
   <h2 className="text-xl font-bold text-orange-500 italic">Testimonials</h2>
   <h1 className="text-3xl font-semibold">What our clients are saying</h1>
 </div>
@@ -282,7 +282,7 @@ export default function Hero(){
     </div>
   </div>
   {/* seventh secton */}
-  <section className="food-section mt-20 relative">
+  <section className="food-section mt-60 relative">
   {/* Image */}
   <div className="food-image">
     <Image 
@@ -314,7 +314,7 @@ export default function Hero(){
 
 
 {/* Eighth section */}
-<div className="flex flex-col text-center w-full mb-2 mt-20">
+<div className="flex flex-col text-center w-full mb-2 mt-40">
   <h2 className="text-lg sm:text-xl font-medium title-font mb-4 text-orange-500 italic">
     Blog Post
   </h2>

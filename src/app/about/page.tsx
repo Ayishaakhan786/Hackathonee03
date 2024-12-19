@@ -1,10 +1,13 @@
 import Image from "next/image";
+
 import upper from './img/upper.png';
 import { IoPlayOutline } from "react-icons/io5";
 import lemon from './img/lemon.png';
 import yogurt from './img/yougurt.png';
 import pasta from './img/pasta.png';
 import third from "./img/thirdSection.png";
+import rounded from './img/sixth-rounded.png';
+
 import { PiCoffeeLight, PiPersonLight, PiStudent } from "react-icons/pi";
 
 export default function About() {
@@ -12,22 +15,23 @@ export default function About() {
     <div>
       {/* First Section: Image and Breadcrumb */}
       <div className="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
-        <Image
-          src={upper}
-          alt="Banner Image"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="min-h-[350px] relative z-50 h-full max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-6">
-          <h2 className="text-white md:text-5xl text-3xl font-bold mb-8">
-            About Us
-          </h2>
-          <div className="flex items-center space-x-2 text-white">
-            <a href="/" className="text-white">Home</a>
-            <span className="text-white"> &gt; </span>
-            <a href="/about" className="text-orange-500">About</a>
-          </div>
-        </div>
-      </div>
+  <Image
+    src={upper}
+    alt="Banner Image"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+  <div className="min-h-[350px] relative z-50 h-full max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-6">
+    <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+      About Us
+    </h2>
+    <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
+      <a href="/" className="text-white hover:text-gray-300">Home</a>
+      <span className="text-white"> &gt; </span>
+      <a href="/about" className="text-orange-500 hover:text-orange-300">About</a>
+    </div>
+  </div>
+</div>
+
       {/* Second Section: Content and Buttons */}
       <section className="text-white body-font">
         <div className="container mx-auto flex px-5 py-24">
@@ -82,41 +86,122 @@ export default function About() {
 
       {/* Third Section */}
       <section className="text-white body-font">
-        <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-            <h1 className="text-white text-3xl text-white text-bold mt-3">Why Choose Us</h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam <br />
-              pellentesque bibendum non dui volutpat fringilla bibendum.
-          <Image
-            className="mb-2 object-cover object-center w-1320px h-386px mt-1552px ml-300px mt-10"
-            alt="hero"
-            src = {third}
-          />
-        </div>
-      </section>
+  <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+    <h1 className="text-white text-3xl font-bold mt-3 text-center">
+      Why Choose Us
+    </h1>
+    <p className="text-white text-center mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Quisque diam
+      pellentesque bibendum non dui volutpat fringilla bibendum.
+    </p>
+    <div className="w-full flex justify-center">
+      <Image
+        className="object-cover object-center w-full max-w-full h-auto rounded-lg"
+        alt="hero"
+        src={third}
+      />
+    </div>
+  </div>
+</section>
+
       {/* Fourth section */}
-<div className="flex gap-4 mb-3 items-center justify-center">
-        <div className="bg-black p-2 rounded-lg text-center">
-          <div className="text-white text-7xl px-1 flex justify-center items-center">
-          <PiStudent/>
-          </div>
-          <h1 className="text-white text-bold text-2xl">Best Chef</h1>
-          <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Quisque diam pellentesque bibendum non dui volutpat</p>
-        </div>
-        <div className="bg-black p-2 rounded-lg text-center">
-        <div className="text-white text-7xl px-1 flex justify-center items-center">
-        <PiCoffeeLight/>
-          </div>
-          <h1 className="text-white text-bold text-2xl">120 Food Items</h1>
-          <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Quisque diam pellentesque bibendum non dui volutpat</p>
-        </div>
-        <div className="bg-black p-2 rounded-lg text-center">
-        <div className="text-white text-7xl px-1 flex justify-center items-center">
-        <PiPersonLight/>
-          </div>
-          <h1 className="text-white text-bold text-2xl">Clean Environment</h1>
-          <p className="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Quisque diam pellentesque bibendum non dui volutpat </p>
-        </div>
-        </div>
+      <div className="flex flex-col md:flex-row gap-4 mb-3 items-center justify-center">
+  <div className="bg-black p-4 rounded-lg text-center w-full md:w-1/3">
+    <div className="text-white text-7xl px-1 flex justify-center items-center">
+      <PiStudent />
+    </div>
+    <h1 className="text-white font-bold text-2xl mt-4">Best Chef</h1>
+    <p className="text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Quisque diam pellentesque bibendum non dui volutpat</p>
+  </div>
+  
+  <div className="bg-black p-4 rounded-lg text-center w-full md:w-1/3">
+    <div className="text-white text-7xl px-1 flex justify-center items-center">
+      <PiCoffeeLight />
+    </div>
+    <h1 className="text-white font-bold text-2xl mt-4">120 Food Items</h1>
+    <p className="text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Quisque diam pellentesque bibendum non dui volutpat</p>
+  </div>
+  
+  <div className="bg-black p-4 rounded-lg text-center w-full md:w-1/3">
+    <div className="text-white text-7xl px-1 flex justify-center items-center">
+      <PiPersonLight />
+    </div>
+    <h1 className="text-white font-bold text-2xl mt-4">Clean Environment</h1>
+    <p className="text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Quisque diam pellentesque bibendum non dui volutpat</p>
+  </div>
 </div>
+{/* fifth section */}
+  
+{/* sixth section */}
+  <div className="w-full text-left mt-20 ml-3">
+  <h2 className="text-xl font-bold text-orange-500 italic">Testimonials</h2>
+  <h1 className="text-3xl font-semibold">What our clients are saying</h1>
+</div>
+<div className="font-[sans-serif] max-w-[410px] h-auto p-6 rounded-lg mx-auto shadow-[0_6px_18px_-6px_rgba(193,195,248)] bg-white relative mt-12">
+  <Image
+    src= {rounded} alt="img"
+    className="w-16 h-16 rounded-full absolute right-0 left-0 mx-auto -top-7"
+  />
+  <div className="mt-6 text-center">
+    <div>
+      <h4 className="text-sm font-extrabold text-gray-800">Alamin Hasan</h4>
+      <p className="text-xs text-gray-500 mt-0.5">
+        Food Specialist 
+      </p>
+    </div>
+      <p className="text-sm text-gray-800 leading-relaxed">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+     Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. 
+     Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices
+     mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
+      </p>
+    </div>
+    <div className="flex justify-center space-x-1 mt-4">
+      <svg
+        className="w-5 fill-[#facc15]"
+        viewBox="0 0 14 13"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+      </svg>
+      <svg
+        className="w-5 fill-[#facc15]"
+        viewBox="0 0 14 13"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+      </svg>
+      <svg
+        className="w-5 fill-[#facc15]"
+        viewBox="0 0 14 13"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+      </svg>
+      <svg
+        className="w-5 fill-[#facc15]"
+        viewBox="0 0 14 13"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+      </svg>
+      <svg
+        className="w-5 fill-[#CED5D8]"
+        viewBox="0 0 14 13"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+      </svg>
+    </div>
+  </div>
+
+{/* seventh section */}
+</div>
+
   );
 }
