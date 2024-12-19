@@ -7,6 +7,7 @@ import yogurt from './img/yougurt.png';
 import pasta from './img/pasta.png';
 import third from "./img/thirdSection.png";
 import rounded from './img/sixth-rounded.png';
+import s1 from './img/AB-S1.png';
 
 import { PiCoffeeLight, PiPersonLight, PiStudent } from "react-icons/pi";
 
@@ -105,7 +106,7 @@ export default function About() {
 </section>
 
       {/* Fourth section */}
-      <div className="flex flex-col md:flex-row gap-4 mb-3 items-center justify-center">
+      <div className="flex flex-col md:flex-row gap-4 mb-8 items-center justify-center">
   <div className="bg-black p-4 rounded-lg text-center w-full md:w-1/3">
     <div className="text-white text-7xl px-1 flex justify-center items-center">
       <PiStudent />
@@ -131,7 +132,71 @@ export default function About() {
   </div>
 </div>
 {/* fifth section */}
-  
+<section className="bg-black py-20 md:py-40">
+  <div className="text-center mb-8">
+    <h2 className="text-2xl md:text-4xl font-bold text-white">Team Member</h2>
+    <p className="text-sm md:text-base text-white opacity-80">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <br />
+      Varius sed pharetra dictum neque massa congue
+    </p>
+  </div>
+  <div className="flex flex-wrap justify-center gap-4 px-4">
+    <div className="bg-white shadow-lg overflow-hidden w-full sm:w-64">
+      <Image
+        src={s1}
+        alt="Mark Henry"
+        className="h-40 sm:h-48 w-full object-cover"
+      />
+      <div className="p-4 text-center">
+        <h3 className="text-base sm:text-xl font-semibold text-black">
+          Mark Henry
+        </h3>
+        <p className="text-sm sm:text-base text-black">Chef</p>
+      </div>
+    </div>
+    <div className="bg-white shadow-lg overflow-hidden w-full sm:w-64">
+      <Image
+        src={s1}
+        alt="Lydia Watson"
+        className="h-40 sm:h-48 w-full object-cover"
+      />
+      <div className="p-4 text-center">
+        <h3 className="text-base sm:text-xl font-semibold text-black">
+          Lydia Watson
+        </h3>
+        <p className="text-sm sm:text-base text-black">Manager</p>
+      </div>
+    </div>
+    <div className="bg-white shadow-lg overflow-hidden w-full sm:w-64">
+      <Image
+        src={s1}
+        alt="Roger Alvarez"
+        className="h-40 sm:h-48 w-full object-cover"
+      />
+      <div className="p-4 text-center">
+        <h3 className="text-base sm:text-xl font-semibold text-black">
+          Roger Alvarez
+        </h3>
+        <p className="text-sm sm:text-base text-black">Cook</p>
+      </div>
+    </div>
+    <div className="bg-white shadow-lg overflow-hidden w-full sm:w-64">
+      <Image
+        src={s1}
+        alt="Tom Morrison"
+        className="h-40 sm:h-48 w-full object-cover"
+      />
+      <div className="p-4 text-center">
+        <h3 className="text-base sm:text-xl font-semibold text-black">
+          Tom Morrison
+        </h3>
+        <p className="text-sm sm:text-base text-black">Waiter</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 {/* sixth section */}
   <div className="w-full text-left mt-20 ml-3">
   <h2 className="text-xl font-bold text-orange-500 italic">Testimonials</h2>
@@ -201,6 +266,7 @@ export default function About() {
   </div>
 
 {/* seventh section */}
+
 </div>
 
   );
