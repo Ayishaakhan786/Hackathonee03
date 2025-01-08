@@ -76,7 +76,7 @@ const Footer = () => {
             <ul className="text-sm text-gray-400 space-y-2">
               {["FAQ", "Terms & Conditions", "Reporting", "Documentation", "Support Policy", "Privacy"].map((help, index) => (
                 <li key={index}>
-                  <a href="#" className="hover:underline">
+                  <a href="../faqs" className="hover:underline">
                     {help}
                   </a>
                 </li>

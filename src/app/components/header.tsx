@@ -20,7 +20,7 @@ export default function Header() {
           <a className="mr-5 text-white py-2">Blogs</a>
           <a className="mr-5 text-white py-2">Pages</a>
           <Link href="../about" className="mr-5 text-white py-2">About Us</Link>
-          <a className="mr-5 text-white py-2">Shop</a>
+          <Link href="../shop" className="mr-5 text-white py-2">Shop</Link>
           <a className="mr-5 text-white py-2">Contact</a>
         </nav>
 
