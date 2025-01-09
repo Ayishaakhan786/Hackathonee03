@@ -4,6 +4,9 @@ import upper from "./imgs/upper.png";
 import shopsec1 from "./imgs/shopSec1.png";
 import shopsec2 from "./imgs/shopSec2.png";
 import shopsec3 from "./imgs/shopSec3.png";
+import shopsec7 from "./imgs/shopSec7.png";
+import shopsec8 from "./imgs/shopSec8.png";
+import shopsec9 from "./imgs/shopSec9.png";
 
 import { CiSearch } from "react-icons/ci";
 
@@ -47,7 +50,7 @@ export default function Shop() {
               </div>
             </div>
           </div>
-          <div className="bg-white shadow-md p-2 rounded mb-6">
+          <div className="bg-white shadow-md p-2 mb-6">
             <h3 className="text-xl font-bold mb-4 text-black">Category</h3>
             <ul>
               <li className="flex items-center py-2">
@@ -144,167 +147,134 @@ export default function Shop() {
 
         {/* Main Content Section */}
         <main className="w-full lg:w-5/6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 ml-2">
             {/* Product Card */}
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div className="bg-white shadow-md overflow-hidden">
               <Image src={shopsec1} alt="fresh" className="w-312 h-267 object-cover" />
               <div className="p-4">
                 <h3 className="text-lg mb-1 text-gray-600">Fresh Lime</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <p className="text-amber-600 mb-4">$38.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
               </div>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div className="bg-white shadow-md overflow-hidden">
               <Image src={shopsec2} alt="Muffin" className="w-312 h-267 object-cover" />
               <div className="p-4">
                 <h3 className="text-l mb-1 text-gray-600">Chocolate Muffine</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <p className="text-amber-600 mb-4">$28.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
               </div>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div className="bg-white shadow-md overflow-hidden">
               <Image src={shopsec3} alt="Burger" className="w-312 h-267 object-cover" />
               <div className="p-4">
                 <h3 className="text-lg mb-1 text-gray-800">Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <p className="text-amber-600 mb-4">$21.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
               </div>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
+            <div className="bg-white shadow-md overflow-hidden">
+              <Image src={shopsec7} alt="Burger" className="w-312 h-267 object-cover" />
               <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <h3 className="text-lg mb-1 text-gray-600">Cheese Butter</h3>
+                <p className="text-amber-600 mb-4">$10.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
               </div>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
+            <div className="bg-white shadow-md overflow-hidden">
+              <Image src={shopsec8} alt="Burger" className="w-312 h-267 object-cover" />
               <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <h3 className="text-lg mb-1 text-gray-600">Sandwiches</h3>
+                <p className="text-amber-600 mb-4">$25.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
               </div>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
+            <div className="bg-white shadow-md overflow-hidden">
+              <Image src={shopsec9} alt="Burger" className="w-312 h-267 object-cover" />
               <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <h3 className="text-lg mb-1 text-gray-600">Chicken Chup</h3>
+                <p className="text-amber-600 mb-4">$12.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
               </div>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
+            <div className="bg-white shadow-md overflow-hidden">
+              <Image src={shopsec1} alt="fresh" className="w-312 h-267 object-cover" />
               <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <h3 className="text-lg mb-1 text-gray-600">Fresh Lime</h3>
+                <p className="text-amber-600 mb-4">$38.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
               </div>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
+            <div className="bg-white shadow-md overflow-hidden">
+              <Image src={shopsec2} alt="Muffin" className="w-312 h-267 object-cover" />
               <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <h3 className="text-l mb-1 text-gray-600">Chocolate Muffine</h3>
+                <p className="text-amber-600 mb-4">$28.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
               </div>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
+            <div className="bg-white shadow-md overflow-hidden">
+              <Image src={shopsec3} alt="Burger" className="w-312 h-267 object-cover" />
               <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <h3 className="text-lg mb-1 text-gray-800">Burger</h3>
+                <p className="text-amber-600 mb-4">$21.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
               </div>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
+            <div className="bg-white shadow-md overflow-hidden">
+              <Image src={shopsec7} alt="Burger" className="w-312 h-267 object-cover" />
               <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <h3 className="text-lg mb-1 text-gray-600">Cheese Butter</h3>
+                <p className="text-amber-600 mb-4">$10.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
               </div>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
+            <div className="bg-white shadow-md overflow-hidden">
+              <Image src={shopsec8} alt="Burger" className="w-312 h-267 object-cover" />
               <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <h3 className="text-lg mb-1 text-gray-600">Sandwiches</h3>
+                <p className="text-amber-600 mb-4">$25.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
               </div>
             </div>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
+            <div className="bg-white shadow-md overflow-hidden">
+              <Image src={shopsec9} alt="Burger" className="w-312 h-267 object-cover" />
               <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <img src="/burger.jpg" alt="Burger" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Classic Burger</h3>
-                <p className="text-amber-600 mb-4">$9.99</p>
+                <h3 className="text-lg mb-1 text-gray-600">Chicken Chup</h3>
+                <p className="text-amber-600 mb-4">$12.00</p>
                 <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                   Add to Cart
                 </button>
