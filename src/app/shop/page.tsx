@@ -7,6 +7,8 @@ import shopsec3 from "./imgs/shopSec3.png";
 import shopsec7 from "./imgs/shopSec7.png";
 import shopsec8 from "./imgs/shopSec8.png";
 import shopsec9 from "./imgs/shopSec9.png";
+import foodCard from "./imgs/foodCard.png";
+import LatestProduct from "./imgs/latestProducts.png";
 
 import { CiSearch } from "react-icons/ci";
 
@@ -135,14 +137,108 @@ export default function Shop() {
               </li>
             </ul>
           </div>
-          <div>image</div>
-          <div className="bg-white shadow-md p-4 mb-6 mt-2">
+
+          <div className="relative w-80 h-96 bg-white text-white shadow-lg overflow-hidden pr-6">
+            <Image
+              src={foodCard}
+              alt="Classic Restaurant"
+              className="w-full h-full object-cover opacity-100"
+            />
+            <div className="absolute inset-0 opacity-90"></div>
+            <div className="absolute top-4 left-4">
+              <h3 className="text-lg font-semibold">Perfect Taste</h3>
+              <h1 className="text-2xl font-bold mt-1">Classic Restaurant</h1>
+              <p className="text-xl font-medium mt-2 text-amber-500 font-semibold">45.00$</p>
+              <button className="mt-4 px-2 py-2 text-white font-bold rounded flex items-center hover:bg-gray-500">
+                Shop Now
+                <span className="ml-2">➔</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="bg-white shadow-md p-4 mb-4 mt-2">
             <h3 className="text-xl font-bold mb-4 text-gray-600">Filter By Price</h3>
             <input type="range" min="0" max="8000" className="w-full mb-2" />
             <p className="text-gray-600">From $0 - $8000 <span className="ml-6">Filter</span></p>
           </div>
-          <div>Latest Product</div>
-          <div>Product Tag</div>
+
+          <div className="p-4 bg-white">
+            <h2 className="text-2xl font-bold mb-4 text-gray-800">Latest Products</h2>
+            <div className="flex items-center mb-4">
+              <Image src={LatestProduct} alt="Pizza" className="w-16 h-16 mr-4" />
+              <div>
+                <h3 className="text-lg font-medium text-black">Pizza</h3>
+                <p className="text-yellow-500">⭐⭐</p>
+                <p className="text-black">$35.00</p>
+              </div>
+            </div>
+            <div className="flex items-center mb-4">
+              <Image
+                src={LatestProduct}
+                alt="Cupcake"
+                className="w-16 h-16 mr-4"
+              />
+              <div>
+                <h3 className="text-lg font-medium text-black">Cupcake</h3>
+                <p className="text-yellow-500">⭐⭐⭐</p>
+                <p className="text-black">$35.00</p>
+              </div>
+            </div>
+            <div className="flex items-center mb-4">
+              <Image
+                src={LatestProduct}
+                alt="Cookies"
+                className="w-16 h-16 mr-4"
+              />
+              <div>
+                <h3 className="text-lg font-medium text-black">Cookies</h3>
+                <p className="text-yellow-500">⭐⭐⭐</p>
+                <p className="text-black">$35.00</p>
+              </div>
+            </div>
+            <div className="flex items-center mb-4">
+              <Image
+                src={LatestProduct}
+                alt="Cookies"
+                className="w-16 h-16 mr-4"
+              />
+              <div>
+                <h3 className="text-lg font-medium text-black">Burger</h3>
+                <p className="text-yellow-500">⭐⭐⭐</p>
+                <p className="text-black">$35.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 bg-white">
+            <h2 className="text-xl font-bold mb-4 text-gray-800">Product Tags</h2>
+            <div className="flex flex-wrap gap-4">
+              <a href="#" className="text-gray-800 hover:text-gray-500">
+                Services
+              </a>
+              <a href="#" className="text-gray-800 hover:text-gray-500">
+                Our Menu
+              </a>
+              <a href="#" className="text-gray-800 hover:text-gray-500">
+                Pizza
+              </a>
+              <a href="#" className="text-gray-800 hover:text-gray-500">
+                Cupcake
+              </a>
+              <a href="#" className="text-orange-600 hover:text-orange-300 underline">
+                Burger
+              </a>
+              <a href="#" className="text-gray-800 hover:text-gray-500">
+                Cookies
+              </a>
+              <a href="#" className="text-gray-800 hover:text-gray-500">
+                Our Shop
+              </a>
+              <a href="#" className="text-gray-800 hover:text-gray-500">
+                Tandoori Chicken
+              </a>
+            </div>
+          </div>
         </aside>
 
         {/* Main Content Section */}

@@ -62,7 +62,7 @@ const Footer = () => {
             <ul className="text-sm text-gray-400 space-y-2">
               {["About", "News", "Partner", "Team", "Menu", "Contact"].map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="hover:underline">
+                  <a href="../cart" className="hover:underline">
                     {link}
                   </a>
                 </li>
