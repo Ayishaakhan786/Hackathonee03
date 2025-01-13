@@ -62,7 +62,7 @@ const Footer = () => {
             <ul className="text-sm text-gray-400 space-y-2">
               {["About", "News", "Partner", "Team", "Menu", "Contact"].map((link, index) => (
                 <li key={index}>
-                  <a href="../cart" className="hover:underline">
+                  <a href="#" className="hover:underline">
                     {link}
                   </a>
                 </li>
@@ -76,7 +76,7 @@ const Footer = () => {
             <ul className="text-sm text-gray-400 space-y-2">
               {["FAQ", "Terms & Conditions", "Reporting", "Documentation", "Support Policy", "Privacy"].map((help, index) => (
                 <li key={index}>
-                  <a href="../faqs" className="hover:underline">
+                  <a href="../components/faqs" className="hover:underline">
                     {help}
                   </a>
                 </li>

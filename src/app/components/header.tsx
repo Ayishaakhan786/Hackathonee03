@@ -16,11 +16,11 @@ export default function Header() {
         {/* Navigation */}
         <nav className="flex flex-wrap items-center text-base gap-x-4 w-full md:w-auto justify-center md:justify-start">
           <a href="/" className="mr-5 text-white py-2">Home</a>
-          <Link href="../menu" className="mr-5 text-white py-2">Menu</Link>
+          <Link href="../components/menu" className="mr-5 text-white py-2">Menu</Link>
           <a className="mr-5 text-white py-2">Blogs</a>
           <a className="mr-5 text-white py-2">Pages</a>
-          <Link href="../about" className="mr-5 text-white py-2">About Us</Link>
-          <Link href="../shop" className="mr-5 text-white py-2">Shop</Link>
+          <Link href="../components/about" className="mr-5 text-white py-2">About Us</Link>
+          <Link href="../components/shop" className="mr-5 text-white py-2">Shop</Link>
           <a className="mr-5 text-white py-2">Contact</a>
         </nav>
 
