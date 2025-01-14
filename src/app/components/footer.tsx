@@ -107,10 +107,22 @@ const Footer = () => {
             © 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
           </span>
           <div className="flex justify-center md:justify-start mt-4 md:mt-0 space-x-4">
-            {[FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest].map((Icon, index) => (
-              <div key={index} className="bg-black w-9 h-9 flex justify-center items-center rounded-full">
+            {[
+              { Icon: FaFacebookF, link: "https://www.facebook.com/me/" },
+              { Icon: FaTwitter, link: "https://www.twitter.com" },
+              { Icon: FaInstagram, link: "https://www.instagram.com/bugs____bunnyyyy__/?__pwa=1#" },
+              { Icon: FaYoutube, link: "https://www.youtube.com/@Buggs_____________bunnyyy" },
+              { Icon: FaPinterest, link: "https://www.pinterest.com" },
+            ].map(({ Icon, link }, index) => (
+              <a
+                key={index}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black w-9 h-9 flex justify-center items-center rounded-full"
+              >
                 <Icon className="text-white text-lg" />
-              </div>
+              </a>
             ))}
           </div>
         </div>
