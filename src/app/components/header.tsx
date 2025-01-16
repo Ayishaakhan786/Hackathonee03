@@ -27,7 +27,9 @@ export default function Header() {
         {/* Icons import from react icons */}
         <div className="flex items-center gap-x-4 text-white md:pl-20 w-full md:w-auto justify-center md:justify-end mt-4 md:mt-0">
           <IoSearchOutline className="text-xl" />
-          <AiOutlineUser className="text-xl" />
+          <Link href="../components/signUpPage">
+            <AiOutlineUser className="text-xl cursor-pointer" />
+          </Link>
           <HiOutlineShoppingBag className="text-xl" />
         </div>
       </div>
