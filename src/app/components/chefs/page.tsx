@@ -55,9 +55,11 @@ export default async function Chefs() {
                                 className="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105"
                                 key={val._id}
                             >
-                                <img
+                                <Image
                                     src={val.imageUrl}
                                     alt="img"
+                                    width={500} // Static width
+                                    height={300} // Static height
                                     className="w-full h-56 sm:h-48 md:h-52 lg:h-60 object-cover"
                                 />
                                 <div className="p-4">
