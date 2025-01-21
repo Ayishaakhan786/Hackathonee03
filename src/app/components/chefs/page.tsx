@@ -53,7 +53,7 @@ export default async function Chefs() {
                         return (
                             <div
                                 className="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105"
-                                key={val.id}
+                                key={val._id}
                             >
                                 <img
                                     src={val.imageUrl}
@@ -77,7 +77,7 @@ export default async function Chefs() {
                                         Specialty: <span className="text-amber-600">{val.specialty}</span>
                                     </p>
                                     <p className="text-gray-600 mb-2">
-                                        Available: <span className="text-amber-600">{val.available}</span>
+                                        Available: <span className="text-amber-600">{val.available} true</span>
                                     </p>
                                 </div>
                             </div>

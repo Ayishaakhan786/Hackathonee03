@@ -265,9 +265,11 @@ export default async function Shop() {
                 className="bg-white shadow-md rounded-lg overflow-hidden"
                 key={val._id}
               >
-                <img
+                <Image
                   src={val.imageUrl}
                   alt={val.name}
+                  width={500} // Static width
+                  height={300} // Static height
                   className="w-full h-60 object-cover"
                 />
                 <div className="p-4">
