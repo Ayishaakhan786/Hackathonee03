@@ -1,20 +1,29 @@
+import { client } from '../../../sanity/lib/client';
+
 import Image from "next/image";
 
-import upper from "./imgs/upper.png";
-import chef01 from "./imgs/chefSec (11).png";
-import chef02 from "./imgs/chefSec (10).png";
-import chef03 from "./imgs/chefSec (1).png";
-import chef04 from "./imgs/chefSec (9).png";
-import chef05 from "./imgs/chefSec (8).png";
-import chef06 from "./imgs/chefSec (7).png";
-import chef07 from "./imgs/chefSec (6).png";
-import chef08 from "./imgs/chefSec (5).png";
-import chef09 from "./imgs/chefSec (4).png";
-import chef10 from "./imgs/chefSec (3).png";
-import chef11 from "./imgs/chefSec (2).png"
-import chef12 from "./imgs/chefSec (12).png";
+import upper from "./img/upper.png";
 
-export default function Chefs() {
+async function foodData() {
+    const fetchData = await client.fetch(`
+      *[_type == "chef"] {
+  _id,
+  name,
+  position,
+  experience,
+  specialty,
+  "imageUrl": image.asset->url,
+  description,
+  available
+}
+
+      `)
+    return fetchData
+}
+
+export default async function Chefs() {
+    const data = await foodData();
+    console.log(data);
     return (
         <div>
             {/* First Section: Image and Breadcrumb */}
@@ -40,126 +49,40 @@ export default function Chefs() {
             <div className="container mx-auto p-4 bg-white">
                 {/* Grid Container */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {/* Card 1 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef01}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">Tahmina Rumi</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
-                    {/* Card 2 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef02}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">Jorina Begum</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
-                    {/* Card 3 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef03}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">M.Mohammad</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
-                    {/* Card 4 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef04}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">Munna Kathy</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
-                    {/* Card 5 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef05}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">Tahmina Rumi</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
-                    {/* Card 6 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef06}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">Bisnu devgon</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
-                    {/* Card 7 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef07}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">Motin Molladsf</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
-                    {/* Card 8 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef08}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">William Rumi</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
-                    {/* Card 9 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef09}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">Kets william roy</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
-                    {/* Card 10 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef10}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">Mahmud kholil</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
-                    {/* Card 11 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef11}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">Ataur Rahman</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
-                    {/* Card 12 */}
-                    <div className="text-center">
-                        <Image
-                            src={chef12}
-                            alt="Chef Name"
-                            className="w-full h-50 object-cover shadow-md"
-                        />
-                        <h3 className="mt-4 text-lg font-medium text-gray-800">Monalisa holly</h3>
-                        <p className="text-sm text-gray-600">Chef</p>
-                    </div>
+                    {data.map((val: any, i: number) => {
+                        return (
+                            <div
+                                className="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105"
+                                key={val.id}
+                            >
+                                <img
+                                    src={val.imageUrl}
+                                    alt="img"
+                                    className="w-full h-56 sm:h-48 md:h-52 lg:h-60 object-cover"
+                                />
+                                <div className="p-4">
+                                    <h3 className="text-lg font-semibold mb-1 text-gray-700">
+                                        {val.name}
+                                    </h3>
+                                    <p className="text-gray-600 mb-2">
+                                        Position: <span className="text-amber-600">{val.position}</span>
+                                    </p>
+                                    <p className="text-gray-600 mb-2">
+                                        Experience: <span className="text-amber-600">{val.experience}</span>
+                                    </p>
+                                    <p className="text-gray-600 mb-2">
+                                        Description: <span className="text-amber-600">{val.description}</span>
+                                    </p>
+                                    <p className="text-gray-600 mb-2">
+                                        Specialty: <span className="text-amber-600">{val.specialty}</span>
+                                    </p>
+                                    <p className="text-gray-600 mb-2">
+                                        Available: <span className="text-amber-600">{val.available}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>

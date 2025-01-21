@@ -17,7 +17,7 @@ export default function signUp() {
                 />
                 <div className="min-h-[350px] relative z-50 h-full max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-6">
                     <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-                        Sign up Page
+                        SignUp Page
                     </h2>
                     <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
                         <a href="/" className="text-white hover:text-gray-300">Home</a>

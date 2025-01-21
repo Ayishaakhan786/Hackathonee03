@@ -17,7 +17,7 @@ export default function Header() {
         <nav className="flex flex-wrap items-center text-base gap-x-4 w-full md:w-auto justify-center md:justify-start">
           <a href="/" className="mr-5 text-white py-2">Home</a>
           <Link href="../components/menu" className="mr-5 text-white py-2">Menu</Link>
-          <a className="mr-5 text-white py-2">Blogs</a>
+          <Link href="../components/blogs" className="mr-5 text-white py-2">Blogs</Link>
           <a className="mr-5 text-white py-2">Pages</a>
           <Link href="../components/about" className="mr-5 text-white py-2">About Us</Link>
           <Link href="../components/shop" className="mr-5 text-white py-2">Shop</Link>
@@ -30,7 +30,9 @@ export default function Header() {
           <Link href="../components/signUpPage">
             <AiOutlineUser className="text-xl cursor-pointer" />
           </Link>
+          <Link href="../components/cart">
           <HiOutlineShoppingBag className="text-xl" />
+          </Link>
         </div>
       </div>
     </header>

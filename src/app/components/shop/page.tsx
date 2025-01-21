@@ -1,18 +1,34 @@
+import { client } from '../../../sanity/lib/client';
+import Link from "next/link";
+
 import Image from "next/image";
 
 import upper from "./imgs/upper.png";
-import shopsec1 from "./imgs/shopSec1.png";
-import shopsec2 from "./imgs/shopSec2.png";
-import shopsec3 from "./imgs/shopSec3.png";
-import shopsec7 from "./imgs/shopSec7.png";
-import shopsec8 from "./imgs/shopSec8.png";
-import shopsec9 from "./imgs/shopSec9.png";
 import foodCard from "./imgs/foodCard.png";
 import LatestProduct from "./imgs/latestProducts.png";
 
 import { CiSearch } from "react-icons/ci";
 
-export default function Shop() {
+async function getData() {
+  const fetchData = await client.fetch(`
+    *[_type == "food"] {
+    _id,
+    name,
+    category,
+    price,
+    originalPrice,
+    tags,
+    description,
+    available,
+    "imageUrl": image.asset->url
+  }
+    `)
+  return fetchData
+}
+
+export default async function Shop() {
+  const data = await getData();
+
   return (
     <div>
       {/* First Section: Image and Breadcrumb */}
@@ -242,145 +258,46 @@ export default function Shop() {
         </aside>
 
         {/* Main Content Section */}
-        <main className="w-full lg:w-5/6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 ml-2">
-            {/* Product Card */}
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec1} alt="fresh" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Fresh Lime</h3>
-                <p className="text-amber-600 mb-4">$38.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
+        <main className="w-full lg:w-5/6 px-2 lg:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {data.map((val: any) => (
+              <div
+                className="bg-white shadow-md rounded-lg overflow-hidden"
+                key={val._id}
+              >
+                <img
+                  src={val.imageUrl}
+                  alt={val.name}
+                  className="w-full h-60 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold mb-1 text-gray-800">
+                    {val.name}
+                  </h3>
+                  <p className="text-gray-600 mb-1">
+                    Original Price: <span className="text-amber-600">${val.originalPrice}</span>
+                  </p>
+                  <p className="text-gray-600 mb-1">
+                    Discounted Price: <span className="text-amber-600">${val.price}</span>
+                  </p>
+                  <p className="text-gray-500 mb-2">{val.description}</p>
+                  <p className="text-gray-500 mb-2">{val.category}</p>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+                    <button className="w-full sm:w-auto bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
+                      Add to cart
+                    </button>
+                    <Link href="/cart">
+                      <button className="w-full sm:w-auto bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">
+                        View Cart
+                      </button>
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec2} alt="Muffin" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-l mb-1 text-gray-600">Chocolate Muffine</h3>
-                <p className="text-amber-600 mb-4">$28.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec3} alt="Burger" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-800">Burger</h3>
-                <p className="text-amber-600 mb-4">$21.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec7} alt="Burger" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Cheese Butter</h3>
-                <p className="text-amber-600 mb-4">$10.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec8} alt="Burger" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Sandwiches</h3>
-                <p className="text-amber-600 mb-4">$25.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec9} alt="Burger" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Chicken Chup</h3>
-                <p className="text-amber-600 mb-4">$12.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec1} alt="fresh" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Fresh Lime</h3>
-                <p className="text-amber-600 mb-4">$38.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec2} alt="Muffin" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-l mb-1 text-gray-600">Chocolate Muffine</h3>
-                <p className="text-amber-600 mb-4">$28.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec3} alt="Burger" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-800">Burger</h3>
-                <p className="text-amber-600 mb-4">$21.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec7} alt="Burger" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Cheese Butter</h3>
-                <p className="text-amber-600 mb-4">$10.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec8} alt="Burger" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Sandwiches</h3>
-                <p className="text-amber-600 mb-4">$25.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white shadow-md overflow-hidden">
-              <Image src={shopsec9} alt="Burger" className="w-312 h-267 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg mb-1 text-gray-600">Chicken Chup</h3>
-                <p className="text-amber-600 mb-4">$12.00</p>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                  Add to Cart
-                </button>
-              </div>
-            </div>
-            {/* Repeat this structure for each product */}
+            ))}
           </div>
         </main>
       </div >
-
     </div >
   );
 }
