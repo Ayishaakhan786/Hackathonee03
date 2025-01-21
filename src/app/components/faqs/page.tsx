@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import uppr from "./imgss/upper.png";
 
@@ -17,9 +18,9 @@ export default function FAQS() {
             FAQ Page
           </h2>
           <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
-            <a href="/" className="text-white hover:text-gray-300">Home</a>
+            <Link href="/" className="text-white hover:text-gray-300">Home</Link>
             <span className="text-white"> &gt; </span>
-            <a href="../faqs" className="text-orange-500 hover:text-orange-300">FAQS</a>
+            <Link href="../faqs" className="text-orange-500 hover:text-orange-300">FAQS</Link>
           </div>
         </div>
       </div>
@@ -69,7 +70,6 @@ export default function FAQS() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

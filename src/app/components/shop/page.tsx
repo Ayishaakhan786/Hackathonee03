@@ -43,9 +43,9 @@ export default async function Shop() {
             Our Shop
           </h2>
           <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
-            <a href="/" className="text-white hover:text-gray-300">Home</a>
+            <Link href="/" className="text-white hover:text-gray-300">Home</Link>
             <span className="text-white"> &gt; </span>
-            <a href="/about" className="text-orange-500 hover:text-orange-300">Shop</a>
+            <Link href="/shop" className="text-orange-500 hover:text-orange-300">Shop</Link>
           </div>
         </div>
       </div>
@@ -229,30 +229,30 @@ export default async function Shop() {
           <div className="p-4 bg-white">
             <h2 className="text-xl font-bold mb-4 text-gray-800">Product Tags</h2>
             <div className="flex flex-wrap gap-4">
-              <a href="#" className="text-gray-800 hover:text-gray-500">
+              <Link href="#" className="text-gray-800 hover:text-gray-500">
                 Services
-              </a>
-              <a href="#" className="text-gray-800 hover:text-gray-500">
+              </Link>
+              <Link href="#" className="text-gray-800 hover:text-gray-500">
                 Our Menu
-              </a>
-              <a href="#" className="text-gray-800 hover:text-gray-500">
+              </Link>
+              <Link href="#" className="text-gray-800 hover:text-gray-500">
                 Pizza
-              </a>
-              <a href="#" className="text-gray-800 hover:text-gray-500">
+              </Link>
+              <Link href="#" className="text-gray-800 hover:text-gray-500">
                 Cupcake
-              </a>
-              <a href="#" className="text-orange-600 hover:text-orange-300 underline">
+              </Link>
+              <Link href="#" className="text-orange-600 hover:text-orange-300 underline">
                 Burger
-              </a>
-              <a href="#" className="text-gray-800 hover:text-gray-500">
+              </Link>
+              <Link href="#" className="text-gray-800 hover:text-gray-500">
                 Cookies
-              </a>
-              <a href="#" className="text-gray-800 hover:text-gray-500">
+              </Link>
+              <Link href="#" className="text-gray-800 hover:text-gray-500">
                 Our Shop
-              </a>
-              <a href="#" className="text-gray-800 hover:text-gray-500">
+              </Link>
+              <Link href="#" className="text-gray-800 hover:text-gray-500">
                 Tandoori Chicken
-              </a>
+              </Link>
             </div>
           </div>
         </aside>

@@ -7,6 +7,7 @@ import footer3 from "./img/footer3.png";
 
 import { PiClockClockwiseBold } from "react-icons/pi";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterest } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -62,9 +63,9 @@ const Footer = () => {
             <ul className="text-sm text-gray-400 space-y-2">
               {["About", "News", "Partner", "Team", "Menu", "Contact"].map((link, index) => (
                 <li key={index}>
-                  <a href="../components/chefs" className="hover:underline">
+                  <Link href="../components/chefs" className="hover:underline">
                     {link}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -76,9 +77,9 @@ const Footer = () => {
             <ul className="text-sm text-gray-400 space-y-2">
               {["FAQ", "Terms & Conditions", "Reporting", "Documentation", "Support Policy", "Privacy"].map((help, index) => (
                 <li key={index}>
-                  <a href="../components/faqs" className="hover:underline">
+                  <Link href="../components/faqs" className="hover:underline">
                     {help}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -114,7 +115,7 @@ const Footer = () => {
               { Icon: FaYoutube, link: "https://www.youtube.com/@Buggs_____________bunnyyy" },
               { Icon: FaPinterest, link: "https://www.pinterest.com" },
             ].map(({ Icon, link }, index) => (
-              <a
+              <Link
                 key={index}
                 href={link}
                 target="_blank"
@@ -122,7 +123,7 @@ const Footer = () => {
                 className="bg-black w-9 h-9 flex justify-center items-center rounded-full"
               >
                 <Icon className="text-white text-lg" />
-              </a>
+              </Link>
             ))}
           </div>
         </div>

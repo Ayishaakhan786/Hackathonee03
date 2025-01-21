@@ -6,6 +6,7 @@ import Image from "next/image"; // Import Image component for banner image
 
 // Sample banner image path (you can replace with your actual image path)
 import upper from "./img/upper.png";
+import Link from "next/link";
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState<any[]>([]);
@@ -71,16 +72,14 @@ export default function Cart() {
             Shopping Cart
           </h2>
           <div className="flex flex-wrap items-center justify-center space-x-2 text-white text-sm sm:text-base">
-            <a href="/" className="text-white hover:text-gray-300">
+            <Link href="/" className="text-white hover:text-gray-300">
               Home
-            </a>
+            </Link>
             <span className="text-white">&gt;</span>
-            <a
-              href="/about"
-              className="text-orange-500 hover:text-orange-300"
-            >
+            <Link href="/cart"
+              className="text-orange-500 hover:text-orange-300">
               Shopping Cart
-            </a>
+            </Link>
           </div>
         </div>
       </div>

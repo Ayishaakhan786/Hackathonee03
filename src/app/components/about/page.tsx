@@ -10,6 +10,7 @@ import rounded from './img/sixth-rounded.png';
 import s1 from './img/AB-S1.png';
 
 import { PiCoffeeLight, PiPersonLight, PiStudent } from "react-icons/pi";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -26,9 +27,9 @@ export default function About() {
             About Us
           </h2>
           <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
-            <a href="/" className="text-white hover:text-gray-300">Home</a>
+            <Link href="/" className="text-white hover:text-gray-300">Home</Link>
             <span className="text-white"> &gt; </span>
-            <a href="/about" className="text-orange-500 hover:text-orange-300">About</a>
+            <Link href="/about" className="text-orange-500 hover:text-orange-300">About</Link>
           </div>
         </div>
       </div>
@@ -264,10 +265,6 @@ export default function About() {
           </svg>
         </div>
       </div>
-
-      {/* seventh section */}
-
     </div>
-
   );
 }

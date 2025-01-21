@@ -3,6 +3,7 @@ import { client } from '../../../sanity/lib/client';
 import Image from "next/image";
 
 import upper from "./img/upper.png";
+import Link from 'next/link';
 
 async function foodData() {
     const fetchData = await client.fetch(`
@@ -38,9 +39,9 @@ export default async function Chefs() {
                         Our Chefs
                     </h2>
                     <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
-                        <a href="/" className="text-white hover:text-gray-300">Home</a>
+                        <Link href="/" className="text-white hover:text-gray-300">Home</Link>
                         <span className="text-white"> &gt; </span>
-                        <a href="/Team" className="text-orange-500 hover:text-orange-300">chef</a>
+                        <Link href="/Team" className="text-orange-500 hover:text-orange-300">chefs</Link>
                     </div>
                 </div>
             </div>
@@ -49,7 +50,7 @@ export default async function Chefs() {
             <div className="container mx-auto p-4 bg-white">
                 {/* Grid Container */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {data.map((val: any, i: number) => {
+                    {data.map((val: any,) => {
                         return (
                             <div
                                 className="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105"

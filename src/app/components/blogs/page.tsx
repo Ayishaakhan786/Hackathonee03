@@ -4,6 +4,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaPinterest } from "react-icons/fa
 
 import upper from "../about/img/upper.png";
 import men from "../img/blog-side-1.png";
+import Link from "next/link";
 
 export default function Blogs() {
     return (
@@ -20,9 +21,9 @@ export default function Blogs() {
                         Blog List
                     </h2>
                     <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
-                        <a href="/" className="text-white hover:text-gray-300">Home</a>
+                        <Link href="/" className="text-white hover:text-gray-300">Home</Link>
                         <span className="text-white"> &gt; </span>
-                        <a href="/about" className="text-orange-500 hover:text-orange-300">Blog</a>
+                        <Link href="/blogs" className="text-orange-500 hover:text-orange-300">Blog</Link>
                     </div>
                 </div>
             </div>

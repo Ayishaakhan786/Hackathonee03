@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import upper from "./img/upper.png";
 import { FaApple, FaGoogle } from "react-icons/fa";
+import Link from "next/link";
 
 export default function signUp() {
     return (
@@ -20,9 +21,9 @@ export default function signUp() {
                         SignUp Page
                     </h2>
                     <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
-                        <a href="/" className="text-white hover:text-gray-300">Home</a>
+                        <Link href="/" className="text-white hover:text-gray-300">Home</Link>
                         <span className="text-white"> &gt; </span>
-                        <a href="/about" className="text-orange-500 hover:text-orange-300">signUpPage</a>
+                        <Link href="/signUpPage" className="text-orange-500 hover:text-orange-300">signUpPage</Link>
                     </div>
                 </div>
             </div>
@@ -82,9 +83,9 @@ export default function signUp() {
                     </button>
                     {/* Forgot Password */}
                     <p className="text-sm text-gray-500 text-center mt-4">
-                        <a href="#" className="text-orange-400 hover:underline">
+                        <Link href="#" className="text-orange-400 hover:underline">
                             Forgot password?
-                        </a>
+                        </Link>
                     </p>
                     {/* Divider */}
                     <div className="flex items-center justify-center my-6">

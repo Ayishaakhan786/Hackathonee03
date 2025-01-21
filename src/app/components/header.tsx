@@ -18,7 +18,7 @@ export default function Header() {
           <a href="/" className="mr-5 text-white py-2">Home</a>
           <Link href="../components/menu" className="mr-5 text-white py-2">Menu</Link>
           <Link href="../components/blogs" className="mr-5 text-white py-2">Blogs</Link>
-          <a className="mr-5 text-white py-2">Pages</a>
+          <Link href="#" className="mr-5 text-white py-2">Pages</Link>
           <Link href="../components/about" className="mr-5 text-white py-2">About Us</Link>
           <Link href="../components/shop" className="mr-5 text-white py-2">Shop</Link>
           <a className="mr-5 text-white py-2">Contact</a>
@@ -31,7 +31,7 @@ export default function Header() {
             <AiOutlineUser className="text-xl cursor-pointer" />
           </Link>
           <Link href="../components/cart">
-          <HiOutlineShoppingBag className="text-xl" />
+            <HiOutlineShoppingBag className="text-xl" />
           </Link>
         </div>
       </div>
