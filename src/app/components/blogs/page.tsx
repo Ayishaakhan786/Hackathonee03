@@ -4,6 +4,11 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaPinterest } from "react-icons/fa
 
 import upper from "../about/img/upper.png";
 import men from "../img/blog-side-1.png";
+import blogSecSide01 from "../img/blog-sideSec-2 (1).png";
+import blogSecSide02 from "../img/blog-sideSec-2 (2).png";
+import blogSecSide03 from "../img/blog-sideSec-2 (3).png";
+import blogSecSide04 from "../img/blog-sideSec-2 (4).png";
+
 import Link from "next/link";
 
 export default function Blogs() {
@@ -37,71 +42,134 @@ export default function Blogs() {
                 </div>
 
                 {/* Right Side */}
-                <div className="w-full md:w-1/3 p-4 mt-2">
-                    <div className="bg-white shadow-md rounded-lg p-4">
+                <div className="w-full md:w-1/3 p-6 mt-2">
+                    <div className="bg-white shadow-md p-2">
                         {/* Search Input */}
                         <input
                             type="text"
                             placeholder="Search Your Keyword"
-                            className="w-full p-2 border border-gray-300 rounded mb-4 focus:outline-none focus:ring focus:ring-gray-200"
+                            className="w-full p-1 border border-gray-300 mb-1 focus:outline-none focus:ring focus:ring-gray-200"
                         />
-                        <div className="text-center">
-                            {/* Profile Image */}
-                            <Image
-                                src={men}
-                                alt="Profile"
-                                className="w-24 h-24 rounded-full mx-auto"
-                            />
-                            {/* Name */}
-                            <h2 className="text-xl font-semibold mt-2">Prince Miyako</h2>
-                            <p className="text-gray-600 text-sm md:text-base">
-                                Blogger | Photographer
-                            </p>
-                            {/* Rating Stars */}
-                            <div className="flex justify-center mt-2">
-                                {[...Array(5)].map((_, i) => (
-                                    <span key={i} className="text-yellow-500 text-sm md:text-base">
-                                        &#9733;
-                                    </span>
-                                ))}
+                    </div>
+                    <div className="text-center w-full p-4 mt-2 bg-white">
+                        {/* Profile Image */}
+                        <Image
+                            src={men}
+                            alt="Profile"
+                            className="w-24 h-24 rounded-full mx-auto"
+                        />
+                        {/* Name */}
+                        <h2 className="text-xl font-semibold mt-2 text-gray-800">Prince Miyako</h2>
+                        <p className="text-gray-600 text-sm md:text-base">
+                            Blogger | Photographer
+                        </p>
+                        {/* Rating Stars */}
+                        <div className="flex justify-center mt-2">
+                            {[...Array(5)].map((_, i) => (
+                                <span key={i} className="text-yellow-500 text-sm md:text-base">
+                                    &#9733;
+                                </span>
+                            ))}
+                        </div>
+                        {/* Description */}
+                        <p className="text-gray-500 mt-2 text-sm md:text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Veritatis distinctio, odio eligendi suscipit reprehenderit atque.
+                        </p>
+                        {/* Social Media Icons */}
+                        <div className="flex justify-center space-x-4 mt-4">
+                            <a
+                                href="https://www.facebook.com/me/"
+                                className="text-gray-500 hover:text-gray-700 transition duration-200"
+                            >
+                                <FaFacebookF className="w-5 h-5 md:w-6 md:h-6" />
+                            </a>
+                            <a
+                                href="https://www.twitter.com"
+                                className="text-gray-500 hover:text-gray-700 transition duration-200"
+                            >
+                                <FaTwitter className="w-5 h-5 md:w-6 md:h-6" />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/bugs____bunnyyyy__/?__pwa=1#"
+                                className="text-gray-500 hover:text-gray-700 transition duration-200"
+                            >
+                                <FaInstagram className="w-5 h-5 md:w-6 md:h-6" />
+                            </a>
+                            <a
+                                href="#"
+                                className="text-gray-500 hover:text-gray-700 transition duration-200"
+                            >
+                                <FaPinterest className="w-5 h-5 md:w-6 md:h-6" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="p-4 bg-white rounded-lg shadow-md mt-2 md:p-6">
+                        <h2 className="text-lg font-bold mb-4 text-gray-800 sm:text-xl">Recent Post</h2>
+                        <div className="space-y-4">
+                            <div className="flex items-start space-x-4 sm:space-x-6">
+                                <Image
+                                    src={blogSecSide04}
+                                    alt="Post 1"
+                                    className="w-12 h-12 rounded-md object-cover sm:w-16 sm:h-16"
+                                />
+                                <div>
+                                    <p className="text-xs text-gray-500 sm:text-sm">June 22, 2020</p>
+                                    <p className="text-xs text-gray-700 mt-2 sm:text-sm">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
                             </div>
-                            {/* Description */}
-                            <p className="text-gray-500 mt-2 text-sm md:text-base">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Veritatis distinctio, odio eligendi suscipit reprehenderit atque.
-                            </p>
-                            {/* Social Media Icons */}
-                            <div className="flex justify-center space-x-4 mt-4">
-                                <a
-                                    href="https://www.facebook.com/me/"
-                                    className="text-gray-500 hover:text-gray-700 transition duration-200"
-                                >
-                                    <FaFacebookF className="w-5 h-5 md:w-6 md:h-6" />
-                                </a>
-                                <a
-                                    href="https://www.twitter.com"
-                                    className="text-gray-500 hover:text-gray-700 transition duration-200"
-                                >
-                                    <FaTwitter className="w-5 h-5 md:w-6 md:h-6" />
-                                </a>
-                                <a
-                                    href="https://www.instagram.com/bugs____bunnyyyy__/?__pwa=1#"
-                                    className="text-gray-500 hover:text-gray-700 transition duration-200"
-                                >
-                                    <FaInstagram className="w-5 h-5 md:w-6 md:h-6" />
-                                </a>
-                                <a
-                                    href="#"
-                                    className="text-gray-500 hover:text-gray-700 transition duration-200"
-                                >
-                                    <FaPinterest className="w-5 h-5 md:w-6 md:h-6" />
-                                </a>
+                            <div className="flex items-start space-x-4 sm:space-x-6">
+                                <Image
+                                    src={blogSecSide03}
+                                    alt="Post 2"
+                                    className="w-12 h-12 rounded-md object-cover sm:w-16 sm:h-16"
+                                />
+                                <div>
+                                    <p className="text-xs text-gray-500 sm:text-sm">June 22, 2020</p>
+                                    <p className="text-xs text-gray-700 mt-2 sm:text-sm">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex items-start space-x-4 sm:space-x-6">
+                                <Image
+                                    src={blogSecSide02}
+                                    alt="Post 3"
+                                    className="w-12 h-12 rounded-md object-cover sm:w-16 sm:h-16"
+                                />
+                                <div>
+                                    <p className="text-xs text-gray-500 sm:text-sm">June 22, 2020</p>
+                                    <p className="text-xs text-gray-700 mt-2 sm:text-sm">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex items-start space-x-4 sm:space-x-6">
+                                <Image
+                                    src={blogSecSide01}
+                                    alt="Post 4"
+                                    className="w-12 h-12 rounded-md object-cover sm:w-16 sm:h-16"
+                                />
+                                <div>
+                                    <p className="text-xs text-gray-500 sm:text-sm">June 22, 2020</p>
+                                    <p className="text-xs text-gray-700 mt-2 sm:text-sm">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                    </div>
+
+
+
+                    <div>
                     </div>
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 }
