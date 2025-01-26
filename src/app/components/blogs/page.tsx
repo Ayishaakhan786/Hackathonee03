@@ -8,6 +8,11 @@ import blogSecSide01 from "../img/blog-sideSec-2 (1).png";
 import blogSecSide02 from "../img/blog-sideSec-2 (2).png";
 import blogSecSide03 from "../img/blog-sideSec-2 (3).png";
 import blogSecSide04 from "../img/blog-sideSec-2 (4).png";
+import bogeSecSide001 from "../img/blog-secSide-3 (1).png";
+import bogeSecSide002 from "../img/blog-secSide-3 (2).png";
+import bogeSecSide003 from "../img/blog-secSide-3 (3).png";
+import bogeSecSide004 from "../img/blog-secSide-3 (4).png";
+import bogeSecSide005 from "../img/blog-secSide-3 (5).png";
 
 import Link from "next/link";
 
@@ -162,6 +167,110 @@ export default function Blogs() {
                             </div>
                         </div>
                     </div>
+
+                    <div className="p-4 border rounded-lg shadow-md bg-white mt-3">
+                        <h2 className="text-xl md:text-2xl font-bold mb-4 text-gray-800 text-center md:text-left">
+                            Filter By Menu
+                        </h2>
+                        <ul className="space-y-4">
+                            <li className="flex flex-col sm:flex-row items-center sm:justify-between">
+                                <div className="flex items-center">
+                                    <Image
+                                        src={bogeSecSide001}
+                                        alt="Chicken Fry"
+                                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-md"
+                                    />
+                                    <span className="ml-4 text-base sm:text-lg text-gray-700 font-bold">Chicken Fry</span>
+                                </div>
+                                <span className="mt-2 sm:mt-0 text-base sm:text-lg font-bold text-gray-600">26</span>
+                            </li>
+                            <li className="flex flex-col sm:flex-row items-center sm:justify-between">
+                                <div className="flex items-center">
+                                    <Image
+                                        src={bogeSecSide002}
+                                        alt="Burger Food"
+                                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-md"
+                                    />
+                                    <span className="ml-4 text-base sm:text-lg text-gray-700 font-bold">Burger Food</span>
+                                </div>
+                                <span className="mt-2 sm:mt-0 text-base sm:text-lg font-bold text-gray-600">46</span>
+                            </li>
+                            <li className="flex flex-col sm:flex-row items-center sm:justify-between">
+                                <div className="flex items-center">
+                                    <Image
+                                        src={bogeSecSide003}
+                                        alt="Pizza"
+                                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-md"
+                                    />
+                                    <span className="ml-4 text-base sm:text-lg text-gray-700 font-bold">Pizza</span>
+                                </div>
+                                <span className="mt-2 sm:mt-0 text-base sm:text-lg font-bold text-gray-600">16</span>
+                            </li>
+                            <li className="flex flex-col sm:flex-row items-center sm:justify-between">
+                                <div className="flex items-center">
+                                    <Image
+                                        src={bogeSecSide004}
+                                        alt="Fresh Fruits"
+                                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-md"
+                                    />
+                                    <span className="ml-4 text-base sm:text-lg text-gray-700 font-bold">Fresh Fruits</span>
+                                </div>
+                                <span className="mt-2 sm:mt-0 text-base sm:text-lg font-bold text-gray-600">36</span>
+                            </li>
+                            <li className="flex flex-col sm:flex-row items-center sm:justify-between">
+                                <div className="flex items-center">
+                                    <Image
+                                        src={bogeSecSide005}
+                                        alt="Vegetables"
+                                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-md"
+                                    />
+                                    <span className="ml-4 text-base sm:text-lg text-gray-700 font-bold">Vegetables</span>
+                                </div>
+                                <span className="mt-2 sm:mt-0 text-base sm:text-lg font-bold text-gray-600">16</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto p-4 border border-gray-300 rounded-lg text-center mt-3 bg-white">
+                        <h2 className="text-lg sm:text-2xl font-bold mb-4 text-gray-800">Popular Tags</h2>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-3">
+                            <div className="px-2 py-1 border border-gray-300 rounded text-sm bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-800">
+                                Sandwich
+                            </div>
+                            <div className="px-2 py-1 border border-gray-300 rounded text-sm bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-800">
+                                Tikka
+                            </div>
+                            <div className="px-2 py-1 border border-gray-300 rounded text-sm bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-800">
+                                Bbq
+                            </div>
+                            <div className="px-2 py-1 border border-gray-300 rounded text-sm bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-800">
+                                Restaurant
+                            </div>
+                            <div className="px-2 py-1 border border-gray-300 rounded text-sm bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-800">
+                                Chicken Sharma
+                            </div>
+                            <div className="px-2 py-1 border border-gray-300 rounded text-sm bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-800">
+                                Health
+                            </div>
+                            <div className="px-2 py-1 border border-gray-300 rounded text-sm bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-800">
+                                Fastfood
+                            </div>
+                            <div className="px-2 py-1 border border-gray-300 rounded text-sm bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-800">
+                                Food
+                            </div>
+                            <div className="px-2 py-1 border border-gray-300 rounded text-sm bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-800">
+                                Pizza
+                            </div>
+                            <div className="px-2 py-1 border border-gray-300 rounded text-sm bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-800">
+                                Burger
+                            </div>
+                            <div className="px-2 py-1 border border-gray-300 rounded text-sm bg-gray-100 hover:bg-gray-200 cursor-pointer text-gray-800">
+                                Chicken
+                            </div>
+                        </div>
+                    </div>
+
+
 
 
 
