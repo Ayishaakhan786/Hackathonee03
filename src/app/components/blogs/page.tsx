@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import { FaFacebookF, FaTwitter, FaInstagram, FaPinterest } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaPinterest, FaFacebook, FaYoutube } from "react-icons/fa";
 
 import upper from "../about/img/upper.png";
 import men from "../img/blog-side-1.png";
@@ -13,6 +13,11 @@ import bogeSecSide002 from "../img/blog-secSide-3 (2).png";
 import bogeSecSide003 from "../img/blog-secSide-3 (3).png";
 import bogeSecSide004 from "../img/blog-secSide-3 (4).png";
 import bogeSecSide005 from "../img/blog-secSide-3 (5).png";
+import bloggs01 from "../img/blog-secside04 (1).png";
+import bloggs02 from "../img/blog-secside04 (2).png";
+import bloggs03 from "../img/blog-secside04 (3).png";
+import bloggs04 from "../img/blog-secside04 (4).png";
+import bloggs05 from "../img/blog-secside04 (5).png";
 
 import Link from "next/link";
 
@@ -270,8 +275,87 @@ export default function Blogs() {
                         </div>
                     </div>
 
+                    <div className="mt-3 rounded-lg max-w-4xl mx-auto p-4 bg-white">
+                        <h2 className="text-2xl font-bold mb-4 text-gray-800">Photo Gallery</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                            <Image
+                                src={bloggs05}
+                                alt="Pizza"
+                                className="w-full h-auto shadow-lg object-cover"
+                            />
+                            <Image
+                                src={bloggs02}
+                                alt="Placeholder"
+                                className="w-full h-auto shadow-lg object-cover"
+                            />
+                            <Image
+                                src={bloggs03}
+                                alt="Dish"
+                                className="w-full h-auto shadow-lg object-cover"
+                            />
+                            <Image
+                                src={bloggs04}
+                                alt="Pizza"
+                                className="w-full h-auto shadow-lg object-cover"
+                            />
+                            <Image
+                                src={bloggs04}
+                                alt="Dish"
+                                className="w-full h-auto shadow-lg object-cover"
+                            />
+                            <Image
+                                src={bloggs01}
+                                alt="Pancakes"
+                                className="w-full h-auto shadow-lg object-cover"
+                            />
+                        </div>
+                    </div>
 
-
+                    <div className="flex flex-col items-center py-6 bg-white mt-3">
+                        <h3 className="text-2xl font-bold mb-4 text-gray-800">Follow Us</h3>
+                        <div className="flex flex-wrap justify-center gap-4">
+                            {/* Twitter Icon */}
+                            <Link
+                                href="https://www.twitter.com"
+                                className="text-gray-600 hover:text-blue-400 transition-colors"
+                                aria-label="Twitter"
+                            >
+                                <FaTwitter className="w-6 h-6 md:w-8 md:h-8" />
+                            </Link>
+                            {/* YouTube Icon */}
+                            <Link
+                                href="https://www.youtube.com/@Buggs_____________bunnyyy"
+                                className="text-gray-600 hover:text-red-500 transition-colors"
+                                aria-label="YouTube"
+                            >
+                                <FaYoutube className="w-6 h-6 md:w-8 md:h-8" />
+                            </Link>
+                            {/* Pinterest Icon */}
+                            <Link
+                                href="https://www.pinterest.com"
+                                className="bg-yellow-500 p-2 rounded-full text-white hover:bg-yellow-600 transition-colors"
+                                aria-label="Pinterest"
+                            >
+                                <FaPinterest className="w-6 h-6 md:w-8 md:h-8" />
+                            </Link>
+                            {/* Instagram Icon */}
+                            <Link
+                                href="https://www.instagram.com/bugs____bunnyyyy__/?__pwa=1#"
+                                className="text-gray-600 hover:text-pink-400 transition-colors"
+                                aria-label="Instagram"
+                            >
+                                <FaInstagram className="w-6 h-6 md:w-8 md:h-8" />
+                            </Link>
+                            {/* Facebook Icon */}
+                            <Link
+                                href="https://www.facebook.com/me/"
+                                className="text-gray-600 hover:text-blue-600 transition-colors"
+                                aria-label="Facebook"
+                            >
+                                <FaFacebook className="w-6 h-6 md:w-8 md:h-8" />
+                            </Link>
+                        </div>
+                    </div>
 
 
                     <div>
