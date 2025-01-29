@@ -1,6 +1,5 @@
-
 import Image from "next/image";
-import { FaFacebookF, FaTwitter, FaInstagram, FaPinterest, FaFacebook, FaYoutube } from "react-icons/fa";
+import Link from "next/link";
 
 import upper from "../about/img/upper.png";
 import men from "../img/blog-side-1.png";
@@ -19,13 +18,10 @@ import bloggs03 from "../img/blog-secside04 (3).png";
 import bloggs04 from "../img/blog-secside04 (4).png";
 import bloggs05 from "../img/blog-secside04 (5).png";
 import blogsecLeft01 from "../img/blogSec-left (1).png";
-import blogsecLeft02 from "../img/blogSec-left (2).png";
-import blogsecLeft03 from "../img/blogSec-left (3).png";
-import blogsecLeft04 from "../img/blogSec-left (4).png";
 
-import Link from "next/link";
+import { FaFacebook, FaFacebookF, FaInstagram, FaPinterest, FaTwitter, FaYoutube } from "react-icons/fa";
 
-export default function Blogs() {
+export default function details() {
     return (
         <div>
             {/* First Section: Image and Breadcrumb */}
@@ -37,18 +33,18 @@ export default function Blogs() {
                 />
                 <div className="min-h-[350px] relative z-50 h-full max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-6">
                     <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-                        Blog List
+                        Blog Details
                     </h2>
                     <div className="flex items-center space-x-2 text-white text-sm sm:text-base">
                         <Link href="/" className="text-white hover:text-gray-300">Home</Link>
                         <span className="text-white"> &gt; </span>
-                        <Link href="/blogs" className="text-orange-500 hover:text-orange-300">Blog</Link>
+                        <Link href="../components/details" className="text-orange-500 hover:text-orange-300">Blog Details</Link>
                     </div>
                 </div>
             </div>
 
             <div className="flex flex-col lg:flex-row gap-4 p-2">
-                {/* Blog Card */}
+                {/* Left Section */}
                 <div className="w-full md:max-w-2xl mx-auto bg-white shadow-md rounded-lg overflow-hidden mt-4">
                     {/* Image Section */}
                     <div className="relative">
@@ -77,117 +73,13 @@ export default function Blogs() {
                         </h2>
 
                         <p className="mt-2 text-gray-600 text-sm md:text-base">
-                            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat
+                            Netus pretium tellus nulla commodo massa adipiscing in elementum magna congue condimentum placerat habitasse potenti ac orci a quisque tristique elementum et viverra at condimentum scelerisque eu mi. Elit praesent cras vehicula a ullamcorper nulla scelerisque aliquet tempus faucibus quam ac aliquet nibh a condimentum suspendisse hac integer leo erat aliquam ut himenaeos.
                         </p>
-
-                        <Link href="../components/details" className="mt-4 inline-block text-orange-500 hover:underline text-orange-300">
-                            Read More →
-                        </Link>
-                    </div>
-
-                    {/* Image Section */}
-                    <div className="relative">
-                        <Image
-                            src={blogsecLeft02}
-                            alt="Tacos"
-                            width={800}
-                            height={400}
-                            className="w-full h-64 md:h-80 object-cover"
-                        />
-                        <div className="absolute top-3 left-3 bg-orange-500 text-white text-sm px-2 py-1 rounded">
-                            14
-                        </div>
-                    </div>
-
-                    {/* Content Section */}
-                    <div className="p-4 md:p-6">
-                        <div className="flex flex-wrap items-center text-gray-500 text-sm gap-2">
-                            <span>📅 Feb 14, 2022</span>
-                            <span>💬 12 Comments</span>
-                            <span>📖 5 min read</span>
-                        </div>
-
-                        <h2 className="mt-2 text-lg md:text-xl font-semibold text-gray-800">
-                            Traditional Soft Pretzels with Sweet Beer Cheese
-                        </h2>
-
-                        <p className="mt-2 text-gray-600 text-sm md:text-base">
-                            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat
+                        <p className="mt-6 text-gray-600 text-sm md:text-base">
+                            Ac haca ullamcorper donec ante habi tasse donec imperdiet eturpis varius per a augue magna hac.
+                            Nec hac et vestibulum duis a tincidunt per a aptent interdum purus feugiat a id aliquet erat
+                            himenaeos nunc torquent euismod adipiscing adipiscing dui gravida justo.
                         </p>
-
-                        <Link href="#" className="mt-4 inline-block text-orange-500 hover:underline text-orange-300">
-                            Read More →
-                        </Link>
-                    </div>
-
-                    {/* Image Section */}
-                    <div className="relative">
-                        <Image
-                            src={blogsecLeft03}
-                            alt="Tacos"
-                            width={800}
-                            height={400}
-                            className="w-full h-64 md:h-80 object-cover"
-                        />
-                        <div className="absolute top-3 left-3 bg-orange-500 text-white text-sm px-2 py-1 rounded">
-                            14
-                        </div>
-                    </div>
-
-                    {/* Content Section */}
-                    <div className="p-4 md:p-6">
-                        <div className="flex flex-wrap items-center text-gray-500 text-sm gap-2">
-                            <span>📅 Feb 14, 2022</span>
-                            <span>💬 12 Comments</span>
-                            <span>📖 5 min read</span>
-                        </div>
-
-                        <h2 className="mt-2 text-lg md:text-xl font-semibold text-gray-800">
-                            The Ultimate Hangover Burger: Egg in a Hole Burger
-                        </h2>
-
-                        <p className="mt-2 text-gray-600 text-sm md:text-base">
-                            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat
-                        </p>
-
-                        <Link href="#" className="mt-4 inline-block text-orange-500 hover:underline text-orange-300">
-                            Read More →
-                        </Link>
-                    </div>
-
-                    {/* Image Section */}
-                    <div className="relative">
-                        <Image
-                            src={blogsecLeft04}
-                            alt="Tacos"
-                            width={800}
-                            height={400}
-                            className="w-full h-64 md:h-80 object-cover"
-                        />
-                        <div className="absolute top-3 left-3 bg-orange-500 text-white text-sm px-2 py-1 rounded">
-                            14
-                        </div>
-                    </div>
-
-                    {/* Content Section */}
-                    <div className="p-4 md:p-6">
-                        <div className="flex flex-wrap items-center text-gray-500 text-sm gap-2">
-                            <span>📅 Feb 14, 2022</span>
-                            <span>💬 12 Comments</span>
-                            <span>📖 5 min read</span>
-                        </div>
-
-                        <h2 className="mt-2 text-lg md:text-xl font-semibold text-gray-800">
-                            My Favorite Easy Black Pizza Toast Recipe
-                        </h2>
-
-                        <p className="mt-2 text-gray-600 text-sm md:text-base">
-                            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat
-                        </p>
-
-                        <Link href="#" className="mt-4 inline-block text-orange-500 hover:underline text-orange-300">
-                            Read More →
-                        </Link>
                     </div>
                 </div>
 
@@ -503,6 +395,6 @@ export default function Blogs() {
                 </div>
 
             </div>
-        </div >
+        </div>
     );
 }
